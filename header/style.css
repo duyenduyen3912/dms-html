@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header-wrap{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #FFFFFF;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 25px;
+    padding: 10px 0;
+}
+
+.logo-wrap{
+    display: flex;
+    align-items: center;
+}
+
+.logo-img{
+    width: 32px;
+    height: auto;
+}
+
+.logo-name{
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: inter;
+    line-height: 32px;
+}
+
+.icon-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.noti-icon{
+    margin: 0 20px;
+}
+
+
+
+
+
+
+@font-face {
+    font-family: inter;
+    src: url('../assets/Inter/Inter-VariableFont_slnt\,wght.ttf');
+}
+

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/fontawesome-free-6.4.2-web/css/all.min.css">
+</head>
+<body>
+    <nav class="wrapper" id="nav">
+      <div class="nav-list">
+        <li
+          class="nav-item"
+          id="dashboard-wrap"
+        >
+          <div class="item-wrap">
+            <i class="fa-solid fa-house nav-icon"></i>
+            <a
+              class="nav-item-name"
+              id="home"
+            >
+              Trang chủ
+            </a>
+          </div>
+        </li>
+       
+        <li class="nav-item" id="student-title">
+          <div class="item-wrap" >
+            <i class="fa-regular fa-user nav-icon" ></i>
+              <div class="nav-item-name " >
+                Quản lý sinh viên
+              </div>
+              <i class="fa-solid fa-angle-down icon-down" onclick="handleOpenSubmenu('student')" id="student-icon"></i>
+            </div>
+        </li>
+        <div
+          class="nav-item-sub animate__animated animate__fadeInDown"
+          id="student"
+        >
+            <div class="sub-item ">
+              <a
+                class="sub-item-link"
+              >
+                Danh sách lớp
+              </a>
+            </div>
+     
+       
+            <div class="sub-item ">
+              <a
+                class="sub-item-link"
+              >
+                Danh sách sinh viên
+              </a>
+            </div>
+  
+         
+        </div>
+        <li class="nav-item" id="study-title">
+            <div class="item-wrap" >
+                <i class="fa-solid fa-bars nav-icon"></i>
+                <div class="nav-item-name " >
+                  Quản lý học tập
+                </div>
+                <i class="fa-solid fa-angle-down icon-down" onclick="handleOpenSubmenu('study')" id="study-icon"></i>
+              </div>
+        </li>
+        <div
+        class="nav-item-sub animate__animated animate__fadeInDown"
+        id="study"
+        >
+            <div class="sub-item ">
+            <a
+                class="sub-item-link"
+            >
+                Điểm
+            </a>
+            </div>
+    
+        
+            <div class="sub-item ">
+            <a
+                class="sub-item-link"
+            >
+                Học bổng
+            </a>
+            </div>
+            <div class="sub-item ">
+            <a
+                class="sub-item-link"
+            >
+                Thực tập
+            </a>
+            </div>
+
+        
+        </div>
+        <li class="nav-item" id="document-title">
+            <div class="item-wrap" >
+                <i class="fa-regular fa-folder nav-icon"></i>
+                <div class="nav-item-name" >
+                  Quản lý giấy tờ
+                </div>
+                <i class="fa-solid fa-angle-down icon-down" onclick="handleOpenSubmenu('document')" id="document-icon"></i>
+              </div>
+        </li>
+        <div
+        class="nav-item-sub animate__animated animate__fadeInDown"
+        id="document"
+        >
+            <div class="sub-item ">
+            <a
+                class="sub-item-link"
+            >
+                Bảo hiểm y tế
+            </a>
+            </div>
+    
+        
+            <div class="sub-item ">
+            <a
+                class="sub-item-link"
+            >
+                Hộ chiếu,visa
+            </a>
+            </div>
+            <div class="sub-item ">
+            <a
+                class="sub-item-link"
+            >
+                Tạm trú
+            </a>
+            </div>
+            <div class="sub-item ">
+                <a
+                    class="sub-item-link"
+                >
+                    Đơn từ
+                </a>
+            </div>
+
+        
+        </div>
+        <li
+        class="nav-item"
+          
+        >
+          <div class="item-wrap">
+            <i class="fa-solid fa-gear nav-icon"></i>
+            <a
+              class="nav-item-name"
+            >
+              Quản lý người dùng
+            </a>
+          </div>
+        </li>
+      </div>
+    </div>
+    </nav>
+</body>
+<script>
+    const handleOpenSubmenu = (name) => {
+        console.log(name)
+        document.getElementById(`${name}`).classList.toggle("menu-active");
+        document.getElementById(`${name}-title`).classList.toggle("title-active")
+        document.getElementById(`${name}-icon`).classList.toggle("icon-active")
+        
+    }
+</script>
+</html>
