@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/headerStyle.css">
+    <link rel="stylesheet" href="./css/sidebarStyle.css">
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <!-- Data Table CSS -->
+    <link rel='stylesheet' href='https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css'>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="../assets/fontawesome-free-6.4.2-web/css/all.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header-wrap">
+            <div class="header">
+                <div class="logo-wrap">
+                    <img src="../assets/logo.jpg" class="logo-img" />
+                    <span class="logo-name">PTIT DMS</span>
+                </div>
+                <div class="icon-list">
+                    <div class="icon">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    </div>
+                    <div class="icon noti-icon">
+                        <i class="fa-regular fa-bell "></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-regular fa-circle-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-auto" style="display: block;">
+            <div class="col">
+                <nav class="wrapper" id="nav">
+                    <div class="nav-list">
+                        <li class="nav-item" id="dashboard-wrap">
+                            <div class="item-wrap">
+                                <i class="fa-solid fa-house nav-icon"></i>
+                                <a class="nav-item-name" id="home">
+                                    Trang chủ
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item" id="student-title">
+                            <div class="item-wrap">
+                                <i class="fa-regular fa-user nav-icon"></i>
+                                <div class="nav-item-name ">
+                                    Quản lý sinh viên
+                                </div>
+                                <i class="fa-solid fa-angle-down icon-down" onclick="handleOpenSubmenu('student')"
+                                    id="student-icon"></i>
+                            </div>
+                        </li>
+                        <div class="nav-item-sub animate__animated animate__fadeInDown" id="student">
+                            <div class="sub-item ">
+                                <a class="sub-item-link">
+                                    Danh sách lớp
+                                </a>
+                            </div>
+
+
+                            <div class="sub-item ">
+                                <a class="sub-item-link">
+                                    Danh sách sinh viên
+                                </a>
+                            </div>
+
+
+                        </div>
+                        <li class="nav-item" id="study-title">
+                            <div class="item-wrap">
+                                <i class="fa-solid fa-bars nav-icon"></i>
+                                <div class="nav-item-name ">
+                                    Quản lý học tập
+                                </div>
+                                <i class="fa-solid fa-angle-down icon-down" onclick="handleOpenSubmenu('study')"
+                                    id="study-icon"></i>
+                            </div>
+                        </li>
+                        <div class="nav-item-sub animate__animated animate__fadeInDown" id="study">
+                            <div class="sub-item ">
+                                <a class="sub-item-link">
+                                    Điểm
+                                </a>
+                            </div>
+
+
+                            <div class="sub-item ">
+                                <a class="sub-item-link">
+                                    Học bổng
+                                </a>
+                            </div>
+                            <div class="sub-item ">
+                                <a class="sub-item-link">
+                                    Thực tập
+                                </a>
+                            </div>
+
+
+                        </div>
+                        <li class="nav-item" id="document-title">
+                            <div class="item-wrap">
+                                <i class="fa-regular fa-folder nav-icon"></i>
+                                <div class="nav-item-name">
+                                    Quản lý giấy tờ
+                                </div>
+                                <i class="fa-solid fa-angle-down icon-down" onclick="handleOpenSubmenu('document')"
+                                    id="document-icon"></i>
+                            </div>
+                        </li>
+                        <div class="nav-item-sub animate__animated animate__fadeInDown" id="document">
+                            <div class="sub-item ">
+                                <a class="sub-item-link">
+                                    Bảo hiểm y tế
+                                </a>
+                            </div>
+
+
+                            <div class="sub-item ">
+                                <a class="sub-item-link">
+                                    Hộ chiếu,visa
+                                </a>
+                            </div>
+                            <div class="sub-item ">
+                                <a class="sub-item-link">
+                                    Tạm trú
+                                </a>
+                            </div>
+                            <div class="sub-item ">
+                                <a class="sub-item-link">
+                                    Đơn từ
+                                </a>
+                            </div>
+
+
+                        </div>
+                        <li class="nav-item">
+                            <div class="item-wrap">
+                                <i class="fa-solid fa-gear nav-icon"></i>
+                                <a class="nav-item-name">
+                                    Quản lý người dùng
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                </nav>
+
+            </div>
+            <div class="col content">
+                <header class="cd__intro">
+                    <div class="text-header">DANH SÁCH ĐIỂM</div>
+                    <p class="text-nav">Quản lý học tập > Danh sách điểm</p>
+                </header>
+                <div class=" input align-items-center ">
+                    <form class="block">
+                        <div class="input-items input-large">
+                            <input type="text" class=" form-control" placeholder="Tìm kiếm tên, MSV">
+                        </div>
+                        <div class="input-items ">
+                            <select class="text-selected form-select input-small" aria-label="Default select example">
+                                <option selected>Khoa</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="input-items ">
+                            <select class="text-selected form-select input-small" aria-label="Default select example">
+                                <option selected>Lớp</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="btn btn-danger btn-custom"> <i class="fa fa-plus-square"
+                                aria-hidden="true" style="color: #ffffff;padding-right: 8px;"></i> Tạo
+                            mới</button>
+
+                </div>
+                <div class="cd__main table">
+                    <table id="example" class="table table-hover" style="width:100%">
+                        <thead class="tableHeader">
+                            <tr class="tableHeader">
+                                <th>STT</th>
+                                <th>
+                                    <div class="title-component">
+                                        <div class="title">Họ tên</div>
+                                        <div>
+                                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+
+                                </th>
+                                <th>
+                                    <div class="title-component">
+                                        <div class="title">Mã sinh viên</div>
+                                        <div>
+                                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+
+                                </th>
+                                <th>
+                                    <div class="title-component">
+                                        <div class="title">Khoa</div>
+                                        <div>
+                                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+
+                                </th>
+                                <th>
+                                    <div class="title-component">
+                                        <div class="title">Lớp </div>
+                                        <div>
+                                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+
+                                </th>
+                                <th>
+                                    <div class="title-component">
+                                        <div class="title"> Số môn/TC đạt</div>
+                                        <div>
+                                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+
+                                </th>
+                                <th>
+                                    <div class="title-component">
+                                        <div class="title">Số môn/TC nợ</div>
+                                        <div>
+                                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+
+                                </th>
+                                <th>
+                                    <div class="title-component">
+                                        <div class="title"></i>
+                                           Điểm TB</div>
+                                        <div>
+                                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Xuân Ninh</td>
+                                <td>B19DCPT029</td>
+                                <td>2019 - 2024</td>
+                                <td>D19CQPT1</td>
+                                <td>20</td>
+                                <td>18</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                 <td>1</td>
+                                <td>Xuân Ninh</td>
+                                <td>B19DCPT029</td>
+                                <td>2019 - 2024</td>
+                                <td>D19CQPT1</td>
+                                <td>20</td>
+                                <td>18</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                 <td>1</td>
+                                <td>Xuân Ninh</td>
+                                <td>B19DCPT029</td>
+                                <td>2019 - 2024</td>
+                                <td>D19CQPT1</td>
+                                <td>20</td>
+                                <td>18</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                 <td>1</td>
+                                <td>Xuân Ninh</td>
+                                <td>B19DCPT029</td>
+                                <td>2019 - 2024</td>
+                                <td>D19CQPT1</td>
+                                <td>20</td>
+                                <td>18</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                 <td>1</td>
+                                <td>Xuân Ninh</td>
+                                <td>B19DCPT029</td>
+                                <td>2019 - 2024</td>
+                                <td>D19CQPT1</td>
+                                <td>20</td>
+                                <td>18</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                 <td>1</td>
+                                <td>Xuân Ninh</td>
+                                <td>B19DCPT029</td>
+                                <td>2019 - 2024</td>
+                                <td>D19CQPT1</td>
+                                <td>20</td>
+                                <td>18</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                 <td>1</td>
+                                <td>Xuân Ninh</td>
+                                <td>B19DCPT029</td>
+                                <td>2019 - 2024</td>
+                                <td>D19CQPT1</td>
+                                <td>20</td>
+                                <td>18</td>
+                                <td>2</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+<script>
+    const handleOpenSubmenu = (name) => {
+        console.log(name)
+        document.getElementById(`${name}`).classList.toggle("menu-active");
+        document.getElementById(`${name}-title`).classList.toggle("title-active")
+        document.getElementById(`${name}-icon`).classList.toggle("icon-active")
+
+    }
+</script>
+
+</html>

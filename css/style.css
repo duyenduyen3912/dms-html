@@ -1,0 +1,126 @@
+* {
+}
+.wrapper {
+  /* margin-top: 5vh; */
+}
+.wrap {
+  background-color: #f3f3f3;
+}
+.content {
+  /* padding: 0 10px 0 0; */
+  margin: 0 21px 0 258px;
+  padding-top: 21px;
+}
+.dataTables_length {
+  display: none;
+}
+.dataTables_filter {
+  display: none;
+}
+.block {
+  display: flex;
+}
+.input {
+  position: relative;
+  margin: 4vh 0 5vh 0;
+}
+.text-header {
+  color: #d12030;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 36px */
+  letter-spacing: -0.456px;
+}
+.text-nav {
+  /* margin: 12px 0 0 0 ; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.304px;
+}
+.text-selected {
+  color: #858383 !important;
+}
+.text-success {
+  color: #1cb854;
+}
+.text-danger {
+  color: #d12030;
+}
+.input-large {
+  width: 282px;
+}
+.input-small {
+  width: 170px;
+}
+.input-items {
+  margin: 0 20px 0 0;
+}
+.title-component {
+  display: flex;
+}
+.tag {
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 4px;
+  /* padding: 3px 20px; */
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  background: #d5f2d2;
+  color: #1cb854;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.304px;
+}
+.tag-warning {
+  display: inline-block;
+  /* padding: 3px 20px; */
+  text-align: center;
+  padding-top: 4px;
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  background: #f2ebd2;
+  color: #ff9210;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.304px;
+}
+.tag-danger {
+  display: inline-block;
+  text-align: center;
+  padding-top: 4px;
+  /* padding: 3px 10px; */
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  background: #f2d2d2;
+  color: #d12030;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.304px;
+}
+th,
+tr {
+  
+  background-color: #fafafa !important;
+  border-radius: 8px 8px 0px 0px !important;
+  border: 1px solid #C1C0C0;
+}
+.table {
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.btn-custom {
+  position: absolute;
+  right: 0;
+}
