@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
     <!-- Data Table CSS -->
     <link rel='stylesheet' href='https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css'>
-    <!-- Font Awesome CSS -->
+    <!-- Font Aweso class="btn-icon"me CSS -->
     <link rel="stylesheet" href="../assets/fontawesome-free-6.4.2-web/css/all.min.css">
 </head>
 
@@ -158,8 +158,8 @@
             </div>
             <div class="col content">
                 <header class="cd__intro">
-                    <div class="text-header">DANH SÁCH HỘ CHIẾU, VISA</div>
-                    <p class="text-nav">Quản lý giấy tờ > Danh sách Hộ chiếu, visa</p>
+                    <div class="text-header">DANH SÁCH TẠM TRÚ</div>
+                    <p class="text-nav">Quản lý giấy tờ > Danh sách tạm trú</p>
                 </header>
                 <div class=" input align-items-center ">
                     <form class="block">
@@ -200,7 +200,7 @@
                                 </th>
                                 <th>
                                     <div class="title-component">
-                                        <div class="title">Số hộ chiếu</div>
+                                        <div class="title">Mã thẻ tạm trú</div>
                                         <div class="btn-icon">
                                             <i class="fa fa-angle-up" aria-hidden="true"></i>
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -210,7 +210,7 @@
                                 </th>
                                 <th>
                                     <div class="title-component">
-                                        <div class="title">Hết hạn HC </div>
+                                        <div class="title">Thời hạn TT </div>
                                         <div class="btn-icon">
                                             <i class="fa fa-angle-up" aria-hidden="true"></i>
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -220,13 +220,21 @@
                                 </th>
                                 <th>
                                     <div class="title-component">
-                                        <div class="title">Hết hạn visa</div>
+                                        <div class="title">Ngày đến CSLT</div>
                                         <div class="btn-icon">
                                             <i class="fa fa-angle-up" aria-hidden="true"></i>
                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                         </div>
                                     </div>
-
+                                </th>
+                                <th>
+                                    <div class="title-component">
+                                        <div class="title">Ngày đi dự kiến</div>
+                                        <div class="btn-icon">
+                                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
                                 </th>
                             </tr>
                         </thead>
@@ -236,46 +244,7 @@
                                 <td>Xuân Ninh</td>
                                 <td>B19DCPT164</td>
                                 <td>0123456789</td>
-                                <td>1/1/2024</td>
-                                <td>1/1/2024</td>                               
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Xuân Ninh</td>
-                                <td>B19DCPT164</td>
-                                <td>0123456789</td>
-                                <td>1/1/2024</td>
-                                <td>1/1/2024</td>                               
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Xuân Ninh</td>
-                                <td>B19DCPT164</td>
-                                <td>0123456789</td>
-                                <td>1/1/2024</td>
-                                <td>1/1/2024</td>                               
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Xuân Ninh</td>
-                                <td>B19DCPT164</td>
-                                <td>0123456789</td>
-                                <td>1/1/2024 <img src="./assets/icon/liveWarning.png" alt=""></td>
-                                <td>1/1/2024</td>                               
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Xuân Ninh</td>
-                                <td>B19DCPT164</td>
-                                <td>0123456789</td>
-                                <td>1/1/2024</td>
-                                <td>1/1/2024</td>                               
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Xuân Ninh</td>
-                                <td>B19DCPT164</td>
-                                <td>0123456789</td>
+                                <td>12 tháng</td>
                                 <td>1/1/2024</td>
                                 <td>1/1/2024 <img src="./assets/icon/liveDanger.png" alt=""></td>                               
                             </tr>
@@ -284,7 +253,17 @@
                                 <td>Xuân Ninh</td>
                                 <td>B19DCPT164</td>
                                 <td>0123456789</td>
-                                <td>1/1/2024 <img src="./assets/icon/liveWarning.png" alt=""></td>
+                                <td>12 tháng</td>
+                                <td>1/1/2024</td>
+                                <td>1/1/2024 <img src="./assets/icon/liveWarning.png" alt=""></td>                               
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Xuân Ninh</td>
+                                <td>B19DCPT164</td>
+                                <td>0123456789</td>
+                                <td>12 tháng</td>
+                                <td>1/1/2024</td>
                                 <td>1/1/2024</td>                               
                             </tr>
                             <tr>
@@ -292,10 +271,46 @@
                                 <td>Xuân Ninh</td>
                                 <td>B19DCPT164</td>
                                 <td>0123456789</td>
-                                <td>1/1/2024 <img src="./assets/icon/liveWarning.png" alt=""></td>
+                                <td>12 tháng</td>
+                                <td>1/1/2024</td>
                                 <td>1/1/2024</td>                               
                             </tr>
-
+                            <tr>
+                                <td>1</td>
+                                <td>Xuân Ninh</td>
+                                <td>B19DCPT164</td>
+                                <td>0123456789</td>
+                                <td>12 tháng</td>
+                                <td>1/1/2024</td>
+                                <td>1/1/2024</td>                               
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Xuân Ninh</td>
+                                <td>B19DCPT164</td>
+                                <td>0123456789</td>
+                                <td>12 tháng</td>
+                                <td>1/1/2024</td>
+                                <td>1/1/2024</td>                               
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Xuân Ninh</td>
+                                <td>B19DCPT164</td>
+                                <td>0123456789</td>
+                                <td>12 tháng</td>
+                                <td>1/1/2024</td>
+                                <td>1/1/2024</td>                               
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Xuân Ninh</td>
+                                <td>B19DCPT164</td>
+                                <td>0123456789</td>
+                                <td>12 tháng</td>
+                                <td>1/1/2024</td>
+                                <td>1/1/2024 </td>                               
+                            </tr>
                         </tbody>
 
                     </table>

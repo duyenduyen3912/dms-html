@@ -60,6 +60,15 @@
 }
 .title-component {
   display: flex;
+  align-items: center;
+}
+.btn-icon{
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 3px;
+}
+.fa-angle-up,.fa-angle-down{
+  font-size: 10px;
 }
 .tag {
   display: inline-block;
